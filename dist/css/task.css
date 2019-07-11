@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 45px;
+  color: #2a2a2a;
+}
+html .task,
+body .task {
+  margin: 30px;
+  color: #32aba3;
+  font-size: 24px;
+}
