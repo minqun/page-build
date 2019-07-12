@@ -1,5 +1,5 @@
 {
-    "name": "gulp-build-page-html",
+    "name": "com-build-html",
     "version": "1.0.0",
     "description": "html构建",
     "main": "gulpfile.js",

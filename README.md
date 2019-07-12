@@ -16,7 +16,7 @@ gulp-page tpl
 
 Using npm:
 ```
-npm install gulp-build-page-html
+npm install com-build-html
 ```
 
 
