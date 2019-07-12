@@ -1,14 +1,14 @@
 {
-    "name": "tpl",
+    "name": "gulp-build-page-html",
     "version": "1.0.0",
-    "description": "a gulp template",
-    "main": "index.js",
+    "description": "html构建",
+    "main": "gulpfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "gulp dev",
         "build": "gulp build"
     },
-    "keywords": [],
+    "keywords": ["gulp", "html", "js", "es6", "less", "css", "模板打包"],
     "author": "MQ",
     "license": "ISC",
     "devDependencies": {

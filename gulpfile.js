@@ -22,7 +22,7 @@ gulp.task('connect', function() {
         // middleware: function(connect, opt) {
         //     // return [
         //     //     proxy('/printbox', {
-        //     //         target: 'http://172.20.8.30:8891',
+        //     //         target: 'http://192.168.5.118:8891',
         //     //         changeOrigin: true
         //     //     })
         //     // ]
@@ -63,6 +63,7 @@ gulp.task('dev-js', ['dev-html'], function() {
             console.log('js Error!', err.message);
             this.end();
         })
+        .pipe(sourcemaps.write('../maps')) //输出map文件
         .pipe(gulp.dest('./dist/js'))
 
     .pipe(connect.reload())
