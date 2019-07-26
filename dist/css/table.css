@@ -1,0 +1,32 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+.table {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-bottom: none;
+  border-spacing: 0px;
+}
+.table th {
+  border-left: 1px solid #ddd;
+  padding: 5px;
+  position: relative;
+  text-align: left;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-bottom: 1px solid #ddd;
+}
+.table th:first-child {
+  width: 70px;
+}
+.table .td {
+  padding: 5px;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

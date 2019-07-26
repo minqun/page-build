@@ -15,10 +15,12 @@ var replace = require('gulp-replace');
 //  ----------------------------------------开发-----------------------------------------
 // 起服务
 gulp.task('connect', function() {
+    connect.serverClose();
     connect.server({
         root: 'dist',
         livereload: true,
-        port: 9000,
+        
+        port: 8099,
         // middleware: function(connect, opt) {
         //     // return [
         //     //     proxy('/printbox', {
@@ -33,9 +35,9 @@ gulp.task('connect', function() {
 // html文件
 gulp.task('dev-html', function() {
     gulp.src('./src/*.html')
-
+    .pipe(gulp.dest('./dist'))
     .pipe(connect.reload())
-        .pipe(gulp.dest('./dist'));
+    
 });
 
 // css文件
@@ -65,8 +67,7 @@ gulp.task('dev-js', ['dev-html'], function() {
         })
         .pipe(sourcemaps.write('../maps')) //输出map文件
         .pipe(gulp.dest('./dist/js'))
-
-    .pipe(connect.reload())
+        .pipe(connect.reload())
 
 
 });
@@ -77,6 +78,7 @@ gulp.task('dev-img', function() {
         .pipe(connect.reload())
         .pipe(gulp.dest('./dist'));
 })
+
 
 // 监控
 gulp.task('watch', function() {
