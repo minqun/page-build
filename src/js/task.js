@@ -32,6 +32,8 @@ class TableMove {
                 this.listen(this.dom[i])
             }
         }
+        let arr = new Set(this.el);
+        console.log(Array.from(arr).reduce((a, b) => { console.log(a, b); if (a && b) return a.clientWidth + b.clientWidth }, 0))
     }
     nowClick(e) {
         this.tableHeight = this.table.clientHeight;
@@ -47,8 +49,8 @@ class TableMove {
         this.topLock = true;
         this.addLine()
     }
-    getTHlength (el) {
-       return  this.pageX - el.getBoundingClientRect().x > this.minWidth ?   this.pageX - el.getBoundingClientRect().x : this.minWidth;
+    getTHlength(el) {
+        return this.pageX - el.getBoundingClientRect().x > this.minWidth ? this.pageX - el.getBoundingClientRect().x : this.minWidth;
     }
     getLocal(event) {
         this.pageX = event.pageX;
@@ -72,7 +74,7 @@ class TableMove {
         console.log(event)
         let dom = document.createElement('div');
         dom.className = "dom-th"
-        dom.tIndex =  i;
+        dom.tIndex = i;
         dom.style = `${this.domStyle}height:100%;top:${0}px;right:${0}px;`
         event.appendChild(dom)
         this.dom = document.querySelectorAll('.dom-th')
@@ -86,24 +88,24 @@ class TableMove {
             }
         }
     }
-    leave () {
+    leave() {
         if (this.start) {
             this.start = false;
             if (this.domLine) {
                 this.table.parentNode.removeChild(this.domLine);
                 this.domLine = null;
-             }
+            }
         }
     }
     up(event) {
         if (this.start) {
             this.start = false;
             this.thDom[this.targetIndex].style = `width:${this.getTHlength(this.thDom[this.targetIndex])}px`;
-             if (this.domLine) {
+            if (this.domLine) {
                 this.table.parentNode.removeChild(this.domLine);
                 this.domLine = null;
-             }
-           
+            }
+
         }
 
     }
@@ -120,11 +122,11 @@ class TableMove {
         }, false);
         this.table.parentNode.addEventListener('mouseleave', (event) => {
             this.leave();
-        }, false);   
-    
+        }, false);
+
         this.table.parentNode.addEventListener('mouseup', (event) => {
             this.up();
-        }, false); 
+        }, false);
     }
 }
 let tables = new TableMove(document.querySelectorAll('th'), document.querySelector('.table'), {

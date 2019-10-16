@@ -46,6 +46,10 @@ var TableMove = function () {
                     this.listen(this.dom[i]);
                 }
             }
+            var arr = new Set(this.el);
+            console.log(Array.from(arr).reduce(function (a, b) {
+                console.log(a, b);if (a && b) return a.clientWidth + b.clientWidth;
+            }, 0));
         }
     }, {
         key: 'nowClick',

@@ -3,6 +3,9 @@ body {
   padding: 0;
   margin: 0;
 }
+.target-parent {
+  overflow: auto;
+}
 .table {
   width: 100%;
   height: 100%;

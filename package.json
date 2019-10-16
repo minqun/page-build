@@ -1,36 +1,52 @@
 {
-    "name": "com-build-html",
-    "version": "1.0.0",
-    "description": "html构建",
-    "main": "gulpfile.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "gulp dev",
-        "build": "gulp build"
-    },
-    "keywords": ["gulp", "html", "js", "es6", "less", "css", "模板打包"],
-    "author": "MQ",
-    "license": "ISC",
-    "devDependencies": {
-        "autoprefixer": "^7.1.4",
-        "babel-core": "^6.26.0",
-        "babel-preset-env": "^1.6.0",
-        "gulp": "^3.9.1",
-        "gulp-babel": "^7.0.0",
-        "gulp-clean-css": "^3.9.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-connect": "^5.0.0",
-        "gulp-less": "^3.3.2",
-        "gulp-postcss": "^7.0.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sourcemaps": "^2.6.1",
-        "gulp-uglify": "^3.0.0",
-        "http-proxy-middleware": "^0.17.4",
-        "uglify-es": "^3.1.3"
-    },
-    "dependencies": {
-        "gulp-html-replace": "^1.6.2",
-        "gulp-inline-source": "^4.0.0",
-        "gulp-replace": "^1.0.0"
-    }
+  "name": "com-build-html",
+  "version": "1.0.0",
+  "description": "html构建",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "gulp",
+    "html",
+    "js",
+    "es6",
+    "less",
+    "css",
+    "模板打包"
+  ],
+  "author": "MQ",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-file-sync": "^2.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "html2canvas": "^1.0.0-rc.5",
+    "http-proxy-middleware": "^0.17.4",
+    "uglify-es": "^3.1.3"
+  },
+  "dependencies": {
+    "babel-preset-stage-2": "^6.24.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-replace": "^1.0.0",
+    "webpack-stream": "^5.2.1"
+  }
 }
